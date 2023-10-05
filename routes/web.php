@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,9 @@ Route::get('/', function () {
 Route::get ('info',function(){
     echo 'capek ngoding';
 });
-Route::get ('register',function(){
-    echo 'kiw kiw';
-});
 
 Route::get('/show', [NewsController::class, 'show']);
 Route::get('/create', [NewsController::class, 'create']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+
